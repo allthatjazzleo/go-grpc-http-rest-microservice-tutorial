@@ -1,0 +1,3 @@
+[submodule "go-grpc-http-rest-microservice-tutorial"]
+	path = go-grpc-http-rest-microservice-tutorial
+	url = https://github.com/amsokol/go-grpc-http-rest-microservice-tutorial.git
