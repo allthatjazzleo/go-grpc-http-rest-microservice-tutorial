@@ -1,3 +1,7 @@
+CREATE USER 'leo'@'localhost' IDENTIFIED BY '12345678';
+GRANT ALL PRIVILEGES ON *.* TO 'leo'@'localhost';
+CREATE DATABASE Grpc;
+USE Grpc;
 CREATE TABLE `ToDo` (
   `ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `Title` varchar(200) DEFAULT NULL,
@@ -6,5 +10,3 @@ CREATE TABLE `ToDo` (
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID_UNIQUE` (`ID`)
 );
-CREATE USER 'leo'@'localhost' IDENTIFIED BY '12345678';
-GRANT ALL PRIVILEGES ON *.* TO 'leo'@'localhost';
