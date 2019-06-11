@@ -1,2 +1,2 @@
 #! /bin/sh
-./client-grpc -server=localhost:9090  
+./client-rest -server=localhost:9090  
