@@ -1,2 +1,2 @@
 #! /bin/sh
-./client-rest -server=http://localhost:8080
+./"$(dirname $0)"/client-rest -server=http://localhost:8080

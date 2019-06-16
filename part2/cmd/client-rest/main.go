@@ -17,7 +17,7 @@ func main() {
 	flag.Parse()
 
 	t := time.Now().In(time.UTC)
-	pfx := t.Format(time.RFC3339)
+	pfx := t.Format(time.RFC3339Nano)
 	// pfx := t.Format(time.Stamp)
 
 	var body string
