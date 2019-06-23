@@ -3,6 +3,9 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"time"
+
+	"go.uber.org/zap"
 )
 
 func doubleSlice(s interface{}) interface{} {
@@ -38,6 +41,16 @@ func (b *b) set() {
 }
 
 func main() {
+	logger, _ := zap.NewProduction()
+	defer logger.Sync()
+	url := "https://hihi.com"
+	logger.Error("ffuck")
+	logger.Info("failed to fetch URL",
+		// Structured context as strongly typed Field values.
+		zap.String("url", url),
+		zap.Int("attempt", 3),
+		zap.Duration("backoff", time.Second),
+	)
 	xs := doubleSlice([]string{"foo", "bar"}).([]string)
 	fmt.Println("data =", xs, "len =", len(xs), "cap =", cap(xs))
 
